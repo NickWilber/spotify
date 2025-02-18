@@ -83,7 +83,7 @@ In advanced stages, the focus shifts to improving query performance. Some optimi
 5. Retrieve the track names that have been streamed on Spotify more than YouTube.
 
 ### Advanced Level
-11. **Find the top 3 most-viewed tracks for each artist using window functions.
+11. **Find the top 3 most-viewed tracks for each artist using window functions.**
 ```sql
 SELECT * FROM (SELECT artist, track, SUM(views) as total_views,
 	DENSE_RANK() OVER (PARTITION BY artist ORDER BY SUM(views) DESC) as rank
